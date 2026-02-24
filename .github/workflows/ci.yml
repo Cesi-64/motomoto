@@ -46,10 +46,12 @@ jobs:
       - name: Install Dep
         run: npm i
 
-      - name: Init and Populate BDD
-        run: |
-          npm run initbdd
-          npm run populate
+      - name: Init  BDD
+        run: npm run initbdd
+          
+      - name: Populate BDD
+        run : |
+          mysql -u root -ptoor --host 127.0.0.1 --port 3306 --database test < ./test/insert_test_user.sql
 
       - name: Run test and coverage
         run: npm run test:cov

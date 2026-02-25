@@ -14,6 +14,9 @@ jobs:
   Build_Push_Docker:
     uses: ./.github/workflows/delivery.yml
     secrets: inherit
+    permissions:
+      contents: read
+      packages: write
 
   #------------------------------
 

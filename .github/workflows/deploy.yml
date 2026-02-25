@@ -36,6 +36,9 @@ jobs:
       #     template: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/bf4221ac079ad74df4200038446f4b5f0295bd5a/quickstarts/microsoft.compute/vm-simple-linux/azuredeploy.json
       #     parameters: adminUsername=${{secrets.AZURE_VM_LOGIN}} adminPasswordOrKey=${{secrets.AZURE_VM_PASSWORD}} vmName="Canary-Server" vmSize="Standard_B2s"
 
+      - name: Chekcout - Je fais ce que je veux !
+        uses: actions/checkout@v4
+
       - name: Deploy VM avec Bicep
         uses: azure/arm-deploy@v2
         with:
